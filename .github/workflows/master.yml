@@ -20,8 +20,3 @@ jobs:
       - run: yarn run-script trigger-prerelease
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: Archive extension
-        uses: actions/upload-artifact@v3
-        with:
-          name: extension
-          path: ./vscode-drawio.vsix

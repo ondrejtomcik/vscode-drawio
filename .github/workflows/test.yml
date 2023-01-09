@@ -23,3 +23,8 @@ jobs:
       - run: yarn install --frozen-lockfile
       - run: yarn lint
       - run: yarn build
+      - name: Archive extension
+        uses: actions/upload-artifact@v3
+        with:
+          name: extension
+          path: ./vscode-drawio.vsix
